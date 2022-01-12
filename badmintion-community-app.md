@@ -8,6 +8,12 @@
 
 ### 技术栈
 
+#### Nodejs
+
+#### Webpack
+
+#### Babel
+
 #### React
 
 #### React Router
@@ -21,6 +27,12 @@
 ### 技术栈
 
 #### SpringBoot
+
+#### SpringSecurity
+
+#### Nimbus Jose + JWT
+
+#### Mybatis
 
 #### MySQL/PostgreSQL
 
@@ -36,5 +48,5 @@
 
 ### 将App打包运行在Android或者IOS上
 
-不仅仅是浏览器端
+#### React Native
 
