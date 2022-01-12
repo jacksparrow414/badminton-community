@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import HelloWorld from "./pages/HelloWorld";
 
 export default function App() {
   // return 为什么要加()?
@@ -8,8 +8,6 @@ export default function App() {
   // https://blog.csdn.net/weixin_43459866/article/details/117279110
   // https://segmentfault.com/q/1010000009504727###
     return(
-      <div className="App">
-        <h1> Hello, World! </h1>
-      </div>
+      <HelloWorld />
     );
 }
