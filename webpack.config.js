@@ -33,7 +33,6 @@ module.exports = {
     open: true,
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: 'public/index.html',
     }),
