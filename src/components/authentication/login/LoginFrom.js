@@ -10,6 +10,7 @@ import { useFormik, Form, FormikProvider } from "formik";
 import * as Yup from 'yup';
 import React from "react";
 import { useState } from "react";
+import { login } from "../../../api/loginForm";
 export default function LoginForm () {
 
     const [showPassword, setShowPassword] = useState(false);
@@ -29,11 +30,20 @@ export default function LoginForm () {
           remember: true
         },
         validationSchema: LoginSchema,
-        onSubmit: values => {
-            alert(JSON.stringify(values, null, 2));
+        onSubmit: (values, props) => {
+            console.log('request-------->')
+            login(values).then(data => {
+              console.log(data)
+              // https://formik.org/docs/api/withFormik#the-formikbag
+              // 成功之后将setSubmitting设置为false
+              props.setSubmitting(false)
+            })
+            console.log('response------->')
+            
         }
     });
     // 写法为ES6的对象解构赋值，formik对象中包含{}里面的值，有相应值会自动赋值
+    // http://es.xiecheng.live/es6/destructuring.html#%E5%AF%B9%E8%B1%A1%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC
     // formik所有props https://formik.org/docs/api/formik
     const { errors, touched, values, isSubmitting, handleSubmit, getFieldProps } = formik;
 
